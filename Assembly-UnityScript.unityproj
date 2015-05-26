@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{09764A63-6267-EC58-418D-2733F598E7C7}</ProjectGuid>
+	<ProjectGuid>{9EB17100-A6F5-5EBF-2DA9-DD04262ACD18}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -97,103 +97,103 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/Plugins/DOTween/DOTween.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/Plugins/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTween43">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/Plugins/DOTween/DOTween43.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/Plugins/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/Plugins/DOTween/DOTween46.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/Plugins/DOTween/DOTween46.dll</HintPath>
  </Reference>
  <Reference Include="DOTween50">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/Plugins/DOTween/DOTween50.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/Plugins/DOTween/DOTween50.dll</HintPath>
  </Reference>
  <Reference Include="SmartLocalization_Runtime">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/SmartLocalization/SmartLocalization_Runtime.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/SmartLocalization/SmartLocalization_Runtime.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTBluetooth">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTBluetooth.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTBluetooth.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTBluetooth_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTBluetooth_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTBluetooth_HL.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTCore">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTCore.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTCore.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTCore_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTCore_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTCore_HL.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTCoreExtras">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTCoreExtras.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTCoreExtras.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTCoreExtras_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTCoreExtras_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTCoreExtras_HL.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTCoreImage">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTCoreImage.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTCoreImage.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTCoreImage_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTCoreImage_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTCoreImage_HL.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTGameController">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTGameController.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTGameController.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTGameController_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTGameController_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTGameController_HL.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTGameKit7">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTGameKit7.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTGameKit7.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTGameKit7_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTGameKit7_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTGameKit7_HL.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTIAP">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTIAP.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTIAP.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTIAP_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTIAP_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTIAP_HL.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTMaps">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTMaps.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTMaps.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTMaps_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTMaps_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTMaps_HL.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTMediaPlayer">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTMediaPlayer.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTMediaPlayer.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTMediaPlayer_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTMediaPlayer_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTMediaPlayer_HL.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTMultipeer">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTMultipeer.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTMultipeer.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTMultipeer_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTMultipeer_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTMultipeer_HL.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTPersonal">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTPersonal.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTPersonal.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTPersonal_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTPersonal_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTPersonal_HL.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTSocial">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTSocial.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTSocial.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTSocial_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTSocial_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTSocial_HL.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTSpeech">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTSpeech.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTSpeech.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTSpeech_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTSpeech_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTSpeech_HL.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTSpriteKit">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTSpriteKit.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTSpriteKit.dll</HintPath>
  </Reference>
  <Reference Include="U3DXTSpriteKit_HL">
- <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/Syllabus/Syllabus/Assets/U3DXT/Plugins/U3DXTSpriteKit_HL.dll</HintPath>
+ <HintPath>/Users/frankservy/Unity Dev and ressources/Projects/SyllabusGit/Assets/U3DXT/Plugins/U3DXTSpriteKit_HL.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -201,7 +201,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{55CFE716-8BD9-1378-1FB3-3118C3895BE4}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{B05E5C3C-EC29-6A50-3723-2F0760B725FB}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

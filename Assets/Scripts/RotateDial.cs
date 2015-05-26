@@ -6,14 +6,16 @@ using UnityEngine.UI;
 public class RotateDial: MonoBehaviour {
 
 	private Quaternion originalRotation;
-	private float startAngle = 0f;
+	private int startAngle = 0;
 	private int numberOfSteps;
-
+	private int angleStep;
+	
 	private string[] Consonnes= { "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v"};
 
 	void Awake()
 	{
 		numberOfSteps = Consonnes.Length;
+		angleStep = 360 / numberOfSteps;
 //		Vector3 centerParent = this.GetComponent<RectTransform>().position;
 //
 //		Debug.Log ("position parent x " + centerParent.x + "y " + centerParent.y);
@@ -48,10 +50,13 @@ public class RotateDial: MonoBehaviour {
 		Vector3 vector = Input.mousePosition - screenPos;
 #endif
 		// angle between the x-axis and a 2D vector starting at zero and terminating at (vector.x,vector.y).
-		startAngle = Mathf.Atan2(vector.x, vector.y) * Mathf.Rad2Deg;
+		startAngle = (int) Mathf.Ceil(Mathf.Atan2(vector.x, vector.y) * Mathf.Rad2Deg);
 	}
 
 	public void Dragging(){
+
+			int newAngle;
+			int numberOfStepsDone;
 
 		Vector2 screenPos = transform.position;
 #if UNITY_IPHONE || UNITY_ANDROID		
@@ -59,25 +64,14 @@ public class RotateDial: MonoBehaviour {
 #else
 		Vector2 vector = (Vector2) Input.mousePosition - screenPos;
 #endif
-		float angle = Mathf.Atan2 (vector.x, vector.y) * Mathf.Rad2Deg;
-		Quaternion newRotation = Quaternion.AngleAxis(angle - startAngle , -transform.forward);
+		int angle = (int) Mathf.Ceil (Mathf.Atan2 (vector.x, vector.y) * Mathf.Rad2Deg);
+		newAngle = angle - startAngle;
+		numberOfStepsDone = newAngle / angleStep;
+		Quaternion newRotation = Quaternion.AngleAxis(numberOfStepsDone*angleStep , -transform.forward);
 		newRotation.y = 0;
 		newRotation.eulerAngles = new Vector3(0,0,newRotation.eulerAngles.z);
 		transform.rotation = originalRotation *  newRotation;
 	}
-
-
-//	int newAngle;
-//	int numberOfStepsDone;
-//	Vector3 screenPos = transform.position;
-//	Vector3 vector = Input.mousePosition - screenPos;
-//	int angle = (int) Mathf.Ceil(Mathf.Atan2 (vector.x, vector.y) * Mathf.Rad2Deg);
-//	newAngle = (angle - startAngle);
-//	numberOfStepsDone= newAngle/angleStep;
-//	Quaternion newRotation = Quaternion.AngleAxis(numberOfStepsDone*angleStep , -transform.forward);
-//	newRotation.y = 0;
-//	newRotation.eulerAngles = new Vector3(0,0,newRotation.eulerAngles.z);
-//	transform.rotation = originalRotation *  newRotation;
 
 
 	//nomenclature des listeners, pourrait avoir plusieurs paramètres
