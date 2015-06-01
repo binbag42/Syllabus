@@ -46,15 +46,19 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CreationConsonnes.cs" />
      <Compile Include="Assets\Scripts\Dial.cs" />
      <Compile Include="Assets\Scripts\DisplayLetter.cs" />
      <Compile Include="Assets\Scripts\DisplayLetterDialStep.cs" />
      <Compile Include="Assets\Scripts\PlaySound.cs" />
+     <Compile Include="Assets\Scripts\Profile.cs" />
      <Compile Include="Assets\Scripts\RotateDial.cs" />
      <Compile Include="Assets\Scripts\RotateDialStep.cs" />
      <Compile Include="Assets\Scripts\RotateFront.cs" />
      <Compile Include="Assets\Scripts\RotateFrontInstantiate.cs" />
      <Compile Include="Assets\Scripts\RotateTween.cs" />
+     <Compile Include="Assets\Scripts\StateStorage.cs" />
+     <Compile Include="Assets\Scripts\UIManagerScript.cs" />
      <Compile Include="Assets\Scripts\rotate.cs" />
      <Compile Include="Assets\SmartLocalization\Examples\LoadAllLanguages.cs" />
      <Compile Include="Assets\SmartLocalization\Scripts\uGUI\LocalizedText.cs" />
@@ -90,7 +94,6 @@
      <Compile Include="Assets\U3DXT\Prefabs\SupportFiles\multipeer\MultipeerBrowser.cs" />
      <Compile Include="Assets\U3DXT\Prefabs\SupportFiles\social\FacebookGameObject.cs" />
      <Compile Include="Assets\U3DXT\Prefabs\SupportFiles\uikit\WebViewGameObject.cs" />
-     <Compile Include="Assets\UIManagerScript.cs" />
      <None Include="Assets\U3DXT\Plugins\U3DXTGameKit7.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTSpriteKit_HL.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTMultipeer.xml" />

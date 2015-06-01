@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class UIManagerScript : MonoBehaviour {
 
@@ -8,7 +9,11 @@ public class UIManagerScript : MonoBehaviour {
 	public Animator dialog;
 	public Animator contentPanel;
 	public Animator gearImage;
+	public Animator welcomeText;
+	public GameObject txtWelcome;
 
+	//nom du joueur
+	private string currentProfile;
 
 	// Use this for initialization
 	void Start()
@@ -17,8 +22,10 @@ public class UIManagerScript : MonoBehaviour {
 		Vector2 position = transform.anchoredPosition;
 		position.y -= transform.rect.height;
 		transform.anchoredPosition = position;
-	}
 
+		Profile p = Profile.Load("LastPlayer");
+		txtWelcome.GetComponent<Text> ().text = p.username;
+	}
 
 	public void StartGame () {
 		Application.LoadLevel ("RotateDial");
@@ -28,6 +35,7 @@ public class UIManagerScript : MonoBehaviour {
 	{
 		startButton.SetBool("isHidden", true);
 		settingsButton.SetBool("isHidden", true);
+		welcomeText.SetBool ("isHidden", true);
 		dialog.enabled = true;
 		dialog.SetBool("isHidden", false);
 	}
@@ -37,6 +45,7 @@ public class UIManagerScript : MonoBehaviour {
 		startButton.SetBool("isHidden", false);
 		settingsButton.SetBool("isHidden", false);
 		dialog.SetBool("isHidden", true);
+		welcomeText.SetBool ("isHidden", false);
 	}
 	
 

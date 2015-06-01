@@ -6,20 +6,21 @@ using UnityEngine.UI;
 public class RotateDial: MonoBehaviour {
 
 	private Quaternion originalRotation;
+	// variable pour suivre la rotation lors d'un drag
 	private int startAngle = 0;
+	// variable contenant le nombre de steps du dial
 	private int numberOfSteps;
+	// variable contenant l'angle d'un step
 	private int angleStep;
 	
 	private string[] Consonnes= { "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v"};
 
 	void Awake()
 	{
+		// création des consonnes sur le dial
 		numberOfSteps = Consonnes.Length;
 		angleStep = 360 / numberOfSteps;
-//		Vector3 centerParent = this.GetComponent<RectTransform>().position;
-//
-//		Debug.Log ("position parent x " + centerParent.x + "y " + centerParent.y);
-//
+		// iteration pour tous les elements du array consonnes
 		for (int i=0; i<Consonnes.Length; i++) {
 			GameObject clone;
 			clone= (GameObject) Instantiate(Resources.Load("TextDial_"));
@@ -27,10 +28,8 @@ public class RotateDial: MonoBehaviour {
 			clone.name="Dial_"+i;
 			clone.transform.SetParent(this.transform, false);
 			clone.GetComponent<Text>().text=(string) Consonnes[i];
-
-//			cloneRT.localPosition= new Vector3(0,0,0);
-//			Vector3 rotationCenter = new Vector3(0,0,0);
 			cloneRT.RotateAround(Vector3.zero, Vector3.forward, i * 360/Consonnes.Length);
+			cloneRT.transform.localPosition= new Vector3(0,0,0);
 
 		}
 	}
@@ -74,7 +73,7 @@ public class RotateDial: MonoBehaviour {
 	}
 
 
-	//nomenclature des listeners, pourrait avoir plusieurs paramètres
+	//nomenclature des listeners avec plusieurs paramètres
 	public delegate void PickedDial(int pickedDial, string nameOfPickedDial, int nameDial);
 	//static donc peut être adressé par tout le monde
 	public static event PickedDial OnPickedDial;
@@ -82,14 +81,10 @@ public class RotateDial: MonoBehaviour {
 	public void EndDrag(){
 		// send an event with the final dial
 		int angleStep = 360 / numberOfSteps;
-		Debug.Log ("angleStep " + angleStep);
+
 		int numberOfStepsDone;
 		numberOfStepsDone= ((int) (360-transform.eulerAngles.z)/angleStep)%numberOfSteps; 
-		Debug.Log ("transform.eulerAngles.z " + transform.eulerAngles.z);
-		Debug.Log ("numberofStepsDone : " + numberOfStepsDone);
+
 		OnPickedDial (numberOfStepsDone, Consonnes[numberOfStepsDone], 0 );
-
 	}
-
-
 }
