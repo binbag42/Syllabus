@@ -14,9 +14,10 @@ public class UIManagerScript : MonoBehaviour {
 	public GameObject txtWelcome;
 	public GameObject mainCamera;
 	public GameObject soundBtn;
+	public GameObject playerNameField;
 
-	//nom du joueur
-	private string currentProfile;
+	//numéro et nom du joueur courant
+	private int currentProfile;
 
 	// Use this for initialization
 	void Start()
@@ -35,7 +36,7 @@ public class UIManagerScript : MonoBehaviour {
 		} else {
 			mainCamera.GetComponent<AudioSource> ().mute = true;
 		}
-
+		currentProfile = GameController.instance.selectedPlayer;
 	}
 
 	public void StartGame () {
@@ -45,11 +46,14 @@ public class UIManagerScript : MonoBehaviour {
 	public void OpenSettings()
 	{
 		//comportement suivant les anciens settings
+		//choix du sound on or off
 		if (GameController.instance.isMusicOn) {
 			soundBtn.GetComponent<Toggle> ().isOn = true;
 		} else {
 			soundBtn.GetComponent<Toggle> ().isOn = false;
 		}
+		//nom du dernier player
+		playerNameField.GetComponent<InputField>().text = GameController.instance.playersName[currentProfile];
 
 		//gestion des animations
 		startButton.SetBool("isHidden", true);
@@ -57,6 +61,26 @@ public class UIManagerScript : MonoBehaviour {
 		welcomeText.SetBool ("isHidden", true);
 		dialog.enabled = true;
 		dialog.SetBool("isHidden", false);
+	}
+
+	public void NewNameEnterred() {
+		GameController.instance.playersName [currentProfile] = playerNameField.GetComponent<InputField> ().text;
+	}
+
+	public void PressedPlayerButtonRight(){
+		if (++currentProfile == GameController.instance.numberMaxPlayer) {
+			currentProfile = 0;
+		}
+			playerNameField.GetComponent<InputField>().text = GameController.instance.playersName[currentProfile];
+
+	}
+
+	public void PressedPlayerButtonLeft(){
+		if (--currentProfile < 0) {
+			currentProfile = GameController.instance.numberMaxPlayer-1;
+		}
+		playerNameField.GetComponent<InputField>().text = GameController.instance.playersName[currentProfile];
+		
 	}
 
 	public void CloseSettings()
@@ -73,8 +97,8 @@ public class UIManagerScript : MonoBehaviour {
 		} else {
 			GameController.instance.isMusicOn = false;
 		}
+		GameController.instance.selectedPlayer = currentProfile;
 		GameController.instance.Save ();
-
 
 	}
 	
