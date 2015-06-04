@@ -12,9 +12,16 @@ public class UIManagerScript : MonoBehaviour {
 	public Animator welcomeText;
 
 	public GameObject txtWelcome;
-	public GameObject mainCamera;
+	public GameObject musicController;
 	public GameObject soundBtn;
 	public GameObject playerNameField;
+
+	public GameObject infoPanel;
+	public GameObject infoQuestionText;
+	public GameObject infoAnswerInputField;
+	public GameObject parentalGatePanel;
+
+	private int infoAnswer;
 
 	//numéro et nom du joueur courant
 	private int currentProfile;
@@ -32,11 +39,12 @@ public class UIManagerScript : MonoBehaviour {
 
 		//comportement suivant les anciens settings
 		if (!GameController.instance.isMusicOn) {
-			mainCamera.GetComponent<AudioSource> ().mute = false;
+			musicController.GetComponents<AudioSource> ()[0].mute = false;
 		} else {
-			mainCamera.GetComponent<AudioSource> ().mute = true;
+			musicController.GetComponents<AudioSource> ()[0].mute = true;
 		}
 		currentProfile = GameController.instance.selectedPlayer;
+		if (!GameController.instance.firstStart) {txtWelcome.GetComponent<Text> ().text = "Welcome back "+GameController.instance.playersName [currentProfile];}
 	}
 
 	public void StartGame () {
@@ -99,7 +107,8 @@ public class UIManagerScript : MonoBehaviour {
 		}
 		GameController.instance.selectedPlayer = currentProfile;
 		GameController.instance.Save ();
-
+		//change le texte de bienvenue avec le nouveau nom sélectionné
+		txtWelcome.GetComponent<Text> ().text = "Welcome "+GameController.instance.playersName [currentProfile];
 	}
 	
 
@@ -112,6 +121,33 @@ public class UIManagerScript : MonoBehaviour {
 		gearImage.enabled = true;
 		gearImage.SetBool("isHidden", !isHidden);
 
+	}
+
+	public void InfoMenuOpen(){
+		//activate info panel when info button is pressed
+
+		infoPanel.SetActive (true);
+		int a=Random.Range(3,10);
+		int b=Random.Range(3,10);
+		int c=Random.Range(1,a*b);
+		infoQuestionText.GetComponent<Text> ().text = a + " x " + b + " - " + c;
+		infoAnswer = a * b - c;
+
+	}
+
+	public void InfoMenuEvaluation(){
+		if (infoAnswerInputField.GetComponent<InputField> ().text == infoAnswer.ToString()) {
+			infoPanel.SetActive (false);
+			parentalGatePanel.SetActive (true);
+		}
+	}
+
+	public void ParentalGateClose(){
+		parentalGatePanel.SetActive (false);
+	}
+
+	public void InfoMenuClose(){
+		infoPanel.SetActive (false);
 	}
 
 }

@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MusicController.cs" />
      <Compile Include="Assets\Scripts\CreationConsonnes.cs" />
      <Compile Include="Assets\Scripts\Dial.cs" />
      <Compile Include="Assets\Scripts\DisplayLetter.cs" />

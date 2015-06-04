@@ -1,10 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameControllers/GameController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UIManagerScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameControllers/GameController.cs" Line="36" Column="1" />
-      <File FileName="Assets/Scripts/Navigate.cs" Line="23" Column="3" />
-      <File FileName="Assets/Scripts/UIManagerScript.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/UIManagerScript.cs" Line="139" Column="85" />
+      <File FileName="Assets/Scripts/GameControllers/GameController.cs" Line="55" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

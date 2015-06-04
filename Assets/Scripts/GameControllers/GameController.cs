@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour {
 	public int currentLevel;
 	public int currentScore;
 
+	public bool firstStart;
 	public bool isGameStartedFirstTime;
 	public bool isMusicOn;
 	
@@ -49,8 +50,10 @@ public class GameController : MonoBehaviour {
 
 		if (data != null) {
 			isGameStartedFirstTime = data.getIsGameStartedFirstTime();
+			firstStart=false;
 		} else {
 			isGameStartedFirstTime=true;
+			firstStart=true;
 		}
 
 		if (isGameStartedFirstTime) {
