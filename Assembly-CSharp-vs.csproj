@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_5_0_1;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_2;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -46,21 +46,24 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\MusicController.cs" />
+     <Compile Include="Assets\Scripts\CallMusicController.cs" />
      <Compile Include="Assets\Scripts\CreationConsonnes.cs" />
      <Compile Include="Assets\Scripts\Dial.cs" />
      <Compile Include="Assets\Scripts\DisplayLetter.cs" />
      <Compile Include="Assets\Scripts\DisplayLetterDialStep.cs" />
      <Compile Include="Assets\Scripts\GameControllers\GameController.cs" />
+     <Compile Include="Assets\Scripts\GameControllers\GamePlayController.cs" />
+     <Compile Include="Assets\Scripts\GameControllers\LevelController.cs" />
+     <Compile Include="Assets\Scripts\GameControllers\MainMenuController.cs" />
+     <Compile Include="Assets\Scripts\GameControllers\MusicController.cs" />
      <Compile Include="Assets\Scripts\Navigate.cs" />
      <Compile Include="Assets\Scripts\PlaySound.cs" />
-     <Compile Include="Assets\Scripts\RotateDial.cs" />
-     <Compile Include="Assets\Scripts\RotateDialStep.cs" />
-     <Compile Include="Assets\Scripts\RotateFront.cs" />
-     <Compile Include="Assets\Scripts\RotateFrontInstantiate.cs" />
-     <Compile Include="Assets\Scripts\RotateTween.cs" />
-     <Compile Include="Assets\Scripts\UIManagerScript.cs" />
-     <Compile Include="Assets\Scripts\rotate.cs" />
+     <Compile Include="Assets\Scripts\Rotate\RotateDial.cs" />
+     <Compile Include="Assets\Scripts\Rotate\RotateDialStep.cs" />
+     <Compile Include="Assets\Scripts\Rotate\RotateFront.cs" />
+     <Compile Include="Assets\Scripts\Rotate\RotateFrontInstantiate.cs" />
+     <Compile Include="Assets\Scripts\Rotate\RotateTween.cs" />
+     <Compile Include="Assets\Scripts\Rotate\rotate.cs" />
      <Compile Include="Assets\SmartLocalization\Examples\LoadAllLanguages.cs" />
      <Compile Include="Assets\SmartLocalization\Scripts\uGUI\LocalizedText.cs" />
      <Compile Include="Assets\U3DXT\Examples\KitchenSink\KitchenSink.cs" />

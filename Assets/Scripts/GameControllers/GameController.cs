@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour {
 	public bool firstStart;
 	public bool isGameStartedFirstTime;
 	public bool isMusicOn;
+	public bool isFXOn=true;
 	
 	public int selectedPlayer;
 	public int highScore;
