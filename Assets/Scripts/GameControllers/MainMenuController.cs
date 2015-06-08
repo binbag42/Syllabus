@@ -46,10 +46,8 @@ public class MainMenuController : MonoBehaviour {
 
 		//comportement suivant les anciens settings
 		if (GameController.instance.isMusicOn) {
-//			musicController.GetComponents<AudioSource> ()[0].mute = false;
 			MusicController.instance.PlayBgMusic();
 		} else {
-//			musicController.GetComponents<AudioSource> ()[0].mute = true;
 			MusicController.instance.StopBgMusic();
 		}
 		currentProfile = GameController.instance.selectedPlayer;
@@ -61,8 +59,6 @@ public class MainMenuController : MonoBehaviour {
 //		Application.LoadLevel ("RotateDial");
 		Application.LoadLevel ("LevelSetupScene");
 	}
-
-
 
 	#region InfoPannel
 

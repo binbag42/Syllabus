@@ -245,7 +245,6 @@
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>..\..\..\..\..\Applications\Unity\Unity.app\Contents\PlaybackEngines\iossupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
-    <Compile Include="..\..\Script snippet\CreateButtonandAddListener.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

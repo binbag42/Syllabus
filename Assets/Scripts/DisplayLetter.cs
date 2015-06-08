@@ -5,20 +5,7 @@ using UnityEngine.UI;
 
 
 public class DisplayLetter : MonoBehaviour {
-//	tentative de singleton qui ne fonctionne pas
-//	private static readonly DisplayLetter instance = new DisplayLetter();
-//	
-//	private DisplayLetter(){}
-//	
-//	public static DisplayLetter Instance
-//	{
-//		get 
-//		{
-//			return this; 
-//		}
-//	}
-
-
+	
 	static public DisplayLetter displayConsonne;
 
 
