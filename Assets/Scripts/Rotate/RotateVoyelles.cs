@@ -2,7 +2,11 @@
 using System.Collections;
 using System;
 
-public class RotateDialStep : MonoBehaviour {
+/// <summary>
+/// Rotate voyelles. Handle the rotation by step of the dial and send an event when drag end with the corresponding letter.
+/// </summary>
+
+public class RotateVoyelles : MonoBehaviour {
 
 	private Quaternion originalRotation;
 	private int startAngle = 0;

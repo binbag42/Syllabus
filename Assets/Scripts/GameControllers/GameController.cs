@@ -4,6 +4,10 @@ using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
+/// <summary>
+/// Game controller. Variable initialisation and Load/Save player pref logics.
+/// </summary>
+
 public class GameController : MonoBehaviour {
 
 	public static GameController instance;

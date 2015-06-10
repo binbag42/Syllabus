@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 using UnityEngine.UI;
 
-public class RotateDial: MonoBehaviour {
+public class RotateConsonnes: MonoBehaviour {
 
 	private Quaternion originalRotation;
 	// variable pour suivre la rotation lors d'un drag
@@ -13,7 +13,7 @@ public class RotateDial: MonoBehaviour {
 	// variable contenant l'angle d'un step
 	private int angleStep;
 	
-	private string[] Consonnes= { "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v"};
+	private string[] Consonnes= { "b", "c", "d", "f", "g", "j", "l", "m", "n", "p", "r", "s", "t", "v"};
 
 	void Awake()
 	{

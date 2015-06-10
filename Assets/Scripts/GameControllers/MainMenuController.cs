@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 
 /// <summary>
-/// Main menu controller.
+/// Main menu controller. Handle the animations and various logics/sub menus/panels of the main menu.
 /// </summary>
 
 public class MainMenuController : MonoBehaviour {

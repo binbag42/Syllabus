@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// handle play of background music and various sounds
+// checks the playerpref to decide if music/FXhave to be played
+
 public class MusicController : MonoBehaviour {
 
 	public static MusicController instance;

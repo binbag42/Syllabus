@@ -7,7 +7,7 @@ using DG.Tweening;
 /// Play sound. As soon as a voyel and consonne have been picked, play the sound of each letter then of the syllable.
 /// </summary>
 
-public class PlaySound : MonoBehaviour {
+public class PlaySoundOfSyllabes : MonoBehaviour {
 
 	private string nameConsonne="";
 	private string nameVoyel="";
@@ -15,8 +15,8 @@ public class PlaySound : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//enregistre l'écouteur HandleOnEndDrag, pour les 2 évenements OnPickedDial, qui est de même caractérsitique que la définition du delegate
-		RotateDial.OnPickedDial += HandleOnEndDrag;
-		RotateDialStep.OnPickedDial += HandleOnEndDrag;
+		RotateConsonnes.OnPickedDial += HandleOnEndDrag;
+		RotateVoyelles.OnPickedDial += HandleOnEndDrag;
 	
 	}
 	

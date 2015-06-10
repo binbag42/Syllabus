@@ -2,20 +2,22 @@
 using System.Collections;
 using UnityEngine.UI;
 
+/// <summary>
+/// Display consonnes. Add a listener to the OnEndDrag events for consonnes, print the letter in the text component
+/// </summary>
 
-
-public class DisplayLetter : MonoBehaviour {
+public class DisplayConsonnes : MonoBehaviour {
 	
-	static public DisplayLetter displayConsonne;
+	static public DisplayConsonnes displayConsonnes;
 
 
 	void Awake(){
-		displayConsonne = this;
+		displayConsonnes = this;
 	}
 		// Use this for initialization
 		void Start () {
 			//enregistre l'écouteur HandleOnEndDrag, à l'évènement OnPickedDial, qui est de même caractérsitique que la définition du delegate
-			RotateDial.OnPickedDial += HandleOnEndDrag;
+			RotateConsonnes.OnPickedDial += HandleOnEndDrag;
 		}
 		
 		

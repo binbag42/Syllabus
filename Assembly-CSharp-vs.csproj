@@ -47,23 +47,24 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CallMusicController.cs" />
-     <Compile Include="Assets\Scripts\CreationConsonnes.cs" />
      <Compile Include="Assets\Scripts\Dial.cs" />
-     <Compile Include="Assets\Scripts\DisplayLetter.cs" />
-     <Compile Include="Assets\Scripts\DisplayLetterDialStep.cs" />
+     <Compile Include="Assets\Scripts\Display.cs" />
      <Compile Include="Assets\Scripts\GameControllers\GameController.cs" />
      <Compile Include="Assets\Scripts\GameControllers\GamePlayController.cs" />
      <Compile Include="Assets\Scripts\GameControllers\LevelController.cs" />
      <Compile Include="Assets\Scripts\GameControllers\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\GameControllers\MusicController.cs" />
-     <Compile Include="Assets\Scripts\Navigate.cs" />
-     <Compile Include="Assets\Scripts\PlaySound.cs" />
-     <Compile Include="Assets\Scripts\Rotate\RotateDial.cs" />
-     <Compile Include="Assets\Scripts\Rotate\RotateDialStep.cs" />
+     <Compile Include="Assets\Scripts\PlaySoundOfSyllabes.cs" />
+     <Compile Include="Assets\Scripts\Rotate\RotateConsonnes.cs" />
      <Compile Include="Assets\Scripts\Rotate\RotateFront.cs" />
      <Compile Include="Assets\Scripts\Rotate\RotateFrontInstantiate.cs" />
      <Compile Include="Assets\Scripts\Rotate\RotateTween.cs" />
+     <Compile Include="Assets\Scripts\Rotate\RotateVoyelles.cs" />
      <Compile Include="Assets\Scripts\Rotate\rotate.cs" />
+     <Compile Include="Assets\Scripts\Z.CreationConsonnes.cs" />
+     <Compile Include="Assets\Scripts\Z.DisplayConsonnes.cs" />
+     <Compile Include="Assets\Scripts\Z.DisplayVoyelles.cs" />
+     <Compile Include="Assets\Scripts\Z.Navigate.cs" />
      <Compile Include="Assets\SmartLocalization\Examples\LoadAllLanguages.cs" />
      <Compile Include="Assets\SmartLocalization\Scripts\uGUI\LocalizedText.cs" />
      <Compile Include="Assets\U3DXT\Examples\KitchenSink\KitchenSink.cs" />
