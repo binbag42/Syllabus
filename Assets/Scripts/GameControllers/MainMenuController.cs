@@ -56,8 +56,12 @@ public class MainMenuController : MonoBehaviour {
 
 	public void StartGame () {
 		MusicController.instance.PlayClick ();
-//		Application.LoadLevel ("RotateDial");
 		Application.LoadLevel ("LevelSetupScene");
+	}
+
+	public void StartGame(string level){
+		MusicController.instance.PlayClick ();
+		Application.LoadLevel (level);
 	}
 
 	#region InfoPannel

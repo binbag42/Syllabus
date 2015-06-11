@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 // menu controller of a game level + initialise variables/objects of the level
 
-public class LevelController:MonoBehaviour {
+public class LevelController1:MonoBehaviour {
 	
 	public string[] Consonnes= { "B", "C", "D", "F", "G", "J", "L", "M", "N", "P", "R", "S", "T", "V"};
 	public string[] Voyelles= {"A", "OU", "È", "É", "U", "O", "I", "E"};
