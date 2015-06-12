@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Cards>
+	<card name="banane", start="ba", tail="nane", link="image1"></card>
+	<card name="malade", start="ma", tail="lade", link="image2"></card>
+	<card name="moto", start="mo", tail="to", link="image3"></card>
+</Cards>

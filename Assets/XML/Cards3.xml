@@ -1,0 +1,23 @@
+<cards>
+	<card>
+	<name>Card1</name>
+	<object name="Name">banane</object>>
+	<object name="Start">ba</object>
+	<object name="Tail">nane</object>
+	<object name="Link">image1</object>
+	</card>
+	<card>
+	<name>Card2</name>
+	<object name="Name">malade</object>>
+	<object name="Start">ma</object>
+	<object name="Tail">lade</object>
+	<object name="Link">image2</object>
+	</card>
+	<card>
+	<name>Card3</name>
+	<object name="Name">moto</object>>
+	<object name="Start">mo</object>
+	<object name="Tail">to</object>
+	<object name="Link">image3</object>
+	</card>
+</cards>

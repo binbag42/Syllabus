@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Cards>
+	<card>
+		<name>"banane"</name>
+		<start>"ba"</start>
+		<tail>"nane"</tail>
+		<link>"image1"</link>
+	</card>
+	<card>
+		<name>"malade"</name>
+		<start>"ma"</start>
+		<tail>"lade"</tail>
+		<link>"image2"</link>
+	</card>
+	<card>
+		<name>"moto"</name>
+		<start>"mo"</start>
+		<tail>"to"</tail>
+		<link>"image3"</link>
+	</card>
+</Cards>

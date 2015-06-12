@@ -20,6 +20,7 @@ public class Display3 : MonoBehaviour {
 	void Start () {
 		//enregistre l'écouteur HandleOnEndDrag, à l'évènement OnPickedDial, qui est de même caractérsitique que la définition du delegate
 		Dial.OnPickedDial += HandleOnEndDrag;
+		StartLevel ();
 	}
 	
 	
@@ -37,4 +38,18 @@ public class Display3 : MonoBehaviour {
 		word = firstletter + secondletter;
 		GetComponent<Text> ().text = word;
 	}
+
+	void StartLevel(){
+		// affiche image
+
+
+		// affiche tail
+
+
+
+	}
+
+	// 
+
+
 }

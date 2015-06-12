@@ -19,9 +19,6 @@ public class Dial : MonoBehaviour {
 	void Start(){
 		numberOfSteps = letters.Length;
 		angleStep = 360 / numberOfSteps;
-		Debug.Log ("numberofSteps " + numberOfSteps);
-		Debug.Log ("angleStep " + angleStep);
-
 	}
 	
 	

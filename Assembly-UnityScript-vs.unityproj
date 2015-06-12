@@ -50,6 +50,7 @@
      <Compile Include="Assets\U3DXT\Examples\gamekit7\GameKitBasics\GameKitBasicsJS.js" />
      <Compile Include="Assets\U3DXT\Examples\multipeer\ShareNearMe\client\GyroClientJS.js" />
      <Compile Include="Assets\U3DXT\Examples\multipeer\ShareNearMe\server\GyroServerJS.js" />
+     <None Include="Assets\XML\Cards3.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTGameKit7.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTSpriteKit_HL.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTMultipeer.xml" />
@@ -81,12 +82,14 @@
      <None Include="Assets\U3DXT\Plugins\U3DXTCore.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTPersonal.xml" />
      <None Include="Assets\SmartLocalization\README.txt" />
+     <None Include="Assets\XML\Cards.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTCoreImage_HL.xml" />
      <None Include="Assets\U3DXT\Examples\iap\IAPTest\README.txt" />
      <None Include="Assets\SmartLocalization\Resources\EmptyResourceHeader.txt" />
      <None Include="Assets\U3DXT\Plugins\U3DXTMediaPlayer_HL.xml" />
      <None Include="Assets\U3DXT\CHANGELOG.txt" />
      <None Include="Assets\U3DXT\Plugins\U3DXTGameController.xml" />
+     <None Include="Assets\XML\Cards2.xml" />
      <None Include="Assets\Shaders\Text3DOneSided.shader" />
      <None Include="Assets\Plugins\DOTween\readme.txt" />
      <None Include="Assets\Shaders\Text3D.shader" />
