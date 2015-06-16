@@ -6,8 +6,9 @@ using System.Collections.Generic;
 using System.Xml;
 
 // level logics for game level3
-// level3= present of a card with the tail, have to guess the first syllable
+// level3= present  a card with a tail, have to guess the first syllable
 
+// classe pour les objets récupérés du fichier xml cards3
 public class Cards
 {
 	public string Name { get; set; }
@@ -27,20 +28,53 @@ public class Cards
 }
 
 public class LevelController3:MonoBehaviour {
-
-
-
+	// pointeur sur le fichier XML des cartes à charger
 	public TextAsset ConfigFile;
-	private Cards[] cardsInDeck=new Cards[4];
+	private List<Cards> cardsInDeck=new List<Cards>();
+
+	private string firstletter, secondletter, word;
+	private string wordToGuess;
+	private string currentTail;
 
 	void Awake(){
+		//charge le fichier les cartes du fichier XML ConfigFile dans la liste de cards cardsInDeck
 		LoadConfigFile ();
-		for (int i=0; i<3; i++){
-			Debug.Log (cardsInDeck[i].Name);
+
+	}
+
+	void Start(){
+		//lance le level
+		startLevel ();
+		//enregistre l'écouteur HandleOnEndDrag, à l'évènement OnPickedDial, qui est de même caractérsitique que la définition du delegate
+		Dial.OnPickedDial += HandleOnEndDrag;
+	}
+	
+	private void startLevel(){
+		int i = 1;
+		wordToGuess = cardsInDeck [i].Name;
+		currentTail = cardsInDeck [i].Tail;
+		Display3.display.DisplayClue (cardsInDeck[i]);
+	}
+
+	void HandleOnEndDrag (int numberOfStepsDone, string name, int dialName){
+		switch (dialName){
+		case 0:
+			// event sent from a consonne/leftmost dial
+			firstletter=name;
+			break;
+		case 1:
+			// event sent from a voyelle/rightmost dial
+			secondletter=name;
+			break;
+		}
+		word = firstletter + secondletter+currentTail;
+		// vérifie si gagné et si oui envoie un event
+		if (word.ToUpper() == wordToGuess.ToUpper()) {
+			Debug.Log ("gagné ");
 		}
 	}
 
-
+	// XML parsing to populate cardsInDeck
 	private void LoadConfigFile(){
 
 		// Load and parse the XML file
@@ -54,8 +88,6 @@ public class LevelController3:MonoBehaviour {
 		foreach (XmlNode cardInfo in cardsList) {
 			XmlNodeList cardcontent = cardInfo.ChildNodes;
 			Cards newCard = new Cards();
-		
-
 
 			foreach (XmlNode cardsItems in cardcontent) { // levels itens nodes.
 				if(cardsItems.Name == "object"){
@@ -75,7 +107,7 @@ public class LevelController3:MonoBehaviour {
 					}
 				}
 			}	
-			cardsInDeck[j++] = newCard;
+			cardsInDeck.Add(newCard);
 		}	
 	}
 }
