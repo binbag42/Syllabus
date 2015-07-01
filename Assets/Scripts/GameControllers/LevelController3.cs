@@ -11,13 +11,18 @@ using System.Xml;
 // classe pour les objets récupérés du fichier xml cards3
 public class Cards
 {
+	//  Mot à deviner
 	public string Name { get; set; }
+	// premiere syllabe de Name
 	public string Start { get; set; }
+	// tout sauf première syllabe de Name
 	public string Tail { get; set; }
+	// lien vers image
 	public string Link { get; set; }
 
 	public Cards() { }
-	
+
+	//constructeur avec 4 parametres
 	public Cards(string name, string start, string tail, string link) 
 	{ 
 		this.Name = name; 
@@ -30,14 +35,17 @@ public class Cards
 public class LevelController3:MonoBehaviour {
 	// pointeur sur le fichier XML des cartes à charger
 	public TextAsset ConfigFile;
+	// list des cartes extraites du fichier XML ConfigFile
 	private List<Cards> cardsInDeck=new List<Cards>();
-
+	// première et seconde lettre des dials, word= firstletter+secondletter+currentTail
 	private string firstletter, secondletter, word;
+	// mot en cours à deviner
 	private string wordToGuess;
+	// fin du mot qui est en cours d'etre deviné
 	private string currentTail;
 
 	void Awake(){
-		//charge le fichier les cartes du fichier XML ConfigFile dans la liste de cards cardsInDeck
+		//charge les cartes du fichier XML ConfigFile dans la liste de cards cardsInDeck
 		LoadConfigFile ();
 
 	}
@@ -50,6 +58,12 @@ public class LevelController3:MonoBehaviour {
 	}
 	
 	private void startLevel(){
+		int currentProfile;
+		//récupère les anciens settings
+		GameController.instance.Load ();
+		// populate le numéro du joueur en cours
+		currentProfile = GameController.instance.selectedPlayer;
+
 		int i = 1;
 		wordToGuess = cardsInDeck [i].Name;
 		currentTail = cardsInDeck [i].Tail;
@@ -84,7 +98,6 @@ public class LevelController3:MonoBehaviour {
 		// Get the list of cards nodes
 		XmlNodeList cardsList = xmlData.GetElementsByTagName ("card");
 
-		int j=0;
 		foreach (XmlNode cardInfo in cardsList) {
 			XmlNodeList cardcontent = cardInfo.ChildNodes;
 			Cards newCard = new Cards();

@@ -30,7 +30,7 @@ public class MainMenuController : MonoBehaviour {
 
 	private int infoAnswer;
 
-	//numéro et nom du joueur courant
+	//numéro du joueur courant
 	private int currentProfile;
 
 	// Use this for initialization
@@ -72,7 +72,7 @@ public class MainMenuController : MonoBehaviour {
 	}
 
 	public void PressedPlayerButtonRight(){
-		if (++currentProfile == GameController.instance.numberMaxPlayer) {
+		if (++currentProfile == GameController.numberMaxPlayer) {
 			currentProfile = 0;
 		}
 			playerNameField.GetComponent<InputField>().text = GameController.instance.playersName[currentProfile];
@@ -81,7 +81,7 @@ public class MainMenuController : MonoBehaviour {
 
 	public void PressedPlayerButtonLeft(){
 		if (--currentProfile < 0) {
-			currentProfile = GameController.instance.numberMaxPlayer-1;
+			currentProfile = GameController.numberMaxPlayer-1;
 		}
 		playerNameField.GetComponent<InputField>().text = GameController.instance.playersName[currentProfile];
 		
@@ -90,13 +90,13 @@ public class MainMenuController : MonoBehaviour {
 		//activate info panel when info button is pressed
 		
 		infoPanel.SetActive (true);
+		// parental gate à résoudre a*b-c
 		int a=Random.Range(3,10);
 		int b=Random.Range(3,10);
 		int c=Random.Range(1,a*b);
 		infoQuestionText1.GetComponent<Text> ().text = "a= "+a + "    b= " + b + "    c= " + c;
 		infoQuestionText2.GetComponent<Text> ().text = "a*b-c=";
 		infoAnswer = a * b - c;
-		
 	}
 	
 	public void InfoMenuEvaluation(){
