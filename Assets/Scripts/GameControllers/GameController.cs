@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Linq;
 
 /// <summary>
 /// Game controller. Variable initialisation and Load/Save player pref logics.
@@ -75,8 +76,8 @@ public class GameController : MonoBehaviour {
 			firstStart=true;
 		}
 
-		// si la structure du fichier est modifiée (ajout/supression de champs...)
-		// enlever ce test pour modifier la structure du fichier en l'écrasant comme si c'était un premier lancement
+		// si la structure du fichier est modifiée (ajout/supression de champs...) ajouter
+		//isGameStartedFirstTime = true;
 
 		if (isGameStartedFirstTime) {
 
@@ -94,21 +95,8 @@ public class GameController : MonoBehaviour {
 			levels = new bool[10];
 			achievements = new bool[10];
 
-			players=new PlayerLevel[GameController.numberMaxPlayer];
-			//itération pour chaque joueur
-			for (int i=0; i<GameController.numberMaxPlayer; i++){
-				p=players[i];
-				//itération pour chaque niveau
-				for (int j=0; j<GameController.numberLevel; j++){
-					Debug.Log ("j= "+j);
-					l=p.levels[1];
-					for (int k=0; k<GameController.numberMaxCartesPerLevel; k++){
-						//init carte
-						c=l.cards[k];
-						Debug.Log("carte k= "+k+" EF= "+c.EF);
-					}
-				}
-			}
+			//init players/levels/cartes
+			players = new PlayerLevel[GameController.numberMaxPlayer].Select(h => new PlayerLevel()).ToArray();
 
 			// pré format les noms des joueurs en tant que PlayerX, X étant un int
 			for (int i=0; i<playersName.Length; i++){
@@ -218,27 +206,9 @@ public class Level{
 	public Carte[] cards;
 	//default constructor
 	public Level(){
-		cards = new Carte[GameController.numberMaxCartesPerLevel];
+		cards = new Carte[GameController.numberMaxCartesPerLevel].Select (h=> new Carte()).ToArray ();
 	}
 }
-
-//public class Level{
-//	public List<Carte> cards;
-//	//default constructor
-//	public Level(){
-//		cards=new List<Carte>();
-//		cards.Add(new Carte ());
-//	}
-//
-//	public Level(int i){
-//		cards=new List<Carte>();
-//		for (int j=0; j<i; j++) {
-//			cards.Add (new Carte ());
-//		}
-//	}
-//
-//
-//}
 
 //classe player = level[]
 [Serializable]
@@ -246,21 +216,8 @@ public class PlayerLevel{
 	public Level[] levels;
 	//default constructor
 	public PlayerLevel(){
-		levels=new Level[GameController.numberLevel];
+		levels=new Level[GameController.numberLevel].Select (h=> new Level()).ToArray();
 	}
-	//accessor via indexer
-//	public Level this[int index]{
-//		get
-//		{
-//			return levels[index];
-//		}
-//		set
-//		{
-//			levels[index] = value;
-//		}
-//	
-//	}
-
 }
 
 //Classe Carte contient le triplet Interval, Repetition, EF
