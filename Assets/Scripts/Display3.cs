@@ -9,6 +9,10 @@ using UnityEngine.UI;
 public class Display3 : MonoBehaviour {
 
 	static public Display3 display;
+	// éléments du canvas
+	public GameObject imageClue;
+	public GameObject feuArtifice;
+	private GameObject[] elementsToHide;
 
 	private string firstletter, secondletter, word;
 	private string wordToGuess="word";
@@ -17,13 +21,21 @@ public class Display3 : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		MakeSingleton ();
+		elementsToHide=GameObject.FindGameObjectsWithTag ("toHide");
 		tail = "tail";
 	}
 
 	void Start () {
 		//enregistre l'écouteur HandleOnEndDrag, à l'évènement OnPickedDial, qui est de même caractérsitique que la définition du delegate
 		Dial.OnPickedDial += HandleOnEndDrag;
+		LevelController3.OnWordGuessed += HandleOnWordGuessed;
 
+	}
+
+	void OnDestroy() {
+		// Unsubscribe, so this object can be collected by the garbage collection
+		Dial.OnPickedDial -= HandleOnEndDrag;
+		LevelController3.OnWordGuessed -= HandleOnWordGuessed;
 	}
 
 	void MakeSingleton(){
@@ -35,29 +47,64 @@ public class Display3 : MonoBehaviour {
 		}
 	} 
 
-	
-	void HandleOnEndDrag (int numberOfStepsDone, string name, int dialName){
-		switch (dialName){
-		case 0:
-			// event sent from a consonne/leftmost dial
-			firstletter=name;
-			break;
-		case 1:
-			// event sent from a voyelle/rightmost dial
-			secondletter=name;
-			break;
+	void HandleOnWordGuessed(){
+		// animation du display
+		Debug.Log ("OnWordGuessed1");
+		//suppression du display et reset
+		firstletter = " ";
+		secondletter = " ";
+		GetComponent<Text> ().text = "";
+		//déactive des éléments du GUI
+		imageClue.SetActive (false);
+		foreach(GameObject item in elementsToHide)
+		{
+			item.SetActive(false);
 		}
-		word = firstletter + secondletter+tail;
-		GetComponent<Text> ().text = word;
+		// animation pour faire jolie
+		feuArtifice.SetActive (true);
+		feuArtifice.transform.position= Input.GetTouch (0).position;
+	}
 
+	public void HandleOnClickReload(){
+		//suppression animation pour faire jolie si nécessaire
+		feuArtifice.SetActive (false);
+		// affichage des éléemts du GUI
+		imageClue.SetActive (true);
+		foreach(GameObject item in elementsToHide)
+		{
+			item.SetActive(true);
+		}
+		// affiche nouvelle carte
+		LevelController3.levelCtrl.AfficheCarte ();
+	}
+
+	void HandleOnEndDrag (int numberOfStepsDone, string name, int dialName){
+
+		if (!LevelController3.levelCtrl.flag) {
+			switch (dialName) {
+			case 0:
+			// event sent from a consonne/leftmost dial
+				firstletter = name;
+				break;
+			case 1:
+			// event sent from a voyelle/rightmost dial
+				secondletter = name;
+				break;
+			}
+			Debug.Log ("OnEndDrag");
+			word = firstletter + secondletter + tail;
+			GetComponent<Text> ().text = word;
+		} else {
+			LevelController3.levelCtrl.flag=false;
+		}
 	}
 
 	public void DisplayClue(Cards cardToGuess ){
 		wordToGuess = cardToGuess.Name;
 		tail = cardToGuess.Tail;
 		// affiche image
-
-
+		imageClue.GetComponent<Image>().sprite=Resources.Load<Sprite>("CardsImage/"+wordToGuess);
+		imageClue.SetActive (true);
 		// affiche tail
 		GetComponent<Text> ().text = tail;
 

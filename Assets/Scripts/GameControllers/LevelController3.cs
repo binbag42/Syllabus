@@ -33,6 +33,8 @@ public class Cards
 }
 
 public class LevelController3:MonoBehaviour {
+	static public LevelController3 levelCtrl;
+	
 	// pointeur sur le fichier XML des cartes à charger
 	public TextAsset ConfigFile;
 	// list des cartes extraites du fichier XML ConfigFile
@@ -43,11 +45,14 @@ public class LevelController3:MonoBehaviour {
 	private string wordToGuess;
 	// fin du mot qui est en cours d'etre deviné
 	private string currentTail;
+	//positionné à TRUE par LevelController HandleOnEndDrag listener si gagné
+	public bool flag { get; set; }
 
 	void Awake(){
 		//charge les cartes du fichier XML ConfigFile dans la liste de cards cardsInDeck
 		LoadConfigFile ();
-
+		flag = false;
+		levelCtrl = this;
 	}
 
 	void Start(){
@@ -55,6 +60,14 @@ public class LevelController3:MonoBehaviour {
 		startLevel ();
 		//enregistre l'écouteur HandleOnEndDrag, à l'évènement OnPickedDial, qui est de même caractérsitique que la définition du delegate
 		Dial.OnPickedDial += HandleOnEndDrag;
+		OnWordGuessed += HandleOnWordGuessed;
+	}
+
+
+	void OnDestroy() {
+		// Unsubscribe, so this object can be collected by the garbage collection
+		Dial.OnPickedDial -= HandleOnEndDrag;
+		OnWordGuessed -= HandleOnWordGuessed;
 	}
 	
 	private void startLevel(){
@@ -63,11 +76,23 @@ public class LevelController3:MonoBehaviour {
 		GameController.instance.Load ();
 		// populate le numéro du joueur en cours
 		currentProfile = GameController.instance.selectedPlayer;
+		AfficheCarte ();
+	}
 
-		int i = 1;
-		wordToGuess = cardsInDeck [i].Name;
-		currentTail = cardsInDeck [i].Tail;
-		Display3.display.DisplayClue (cardsInDeck[i]);
+	public void AfficheCarte(){
+		// reset le dial 
+		firstletter = " ";
+		secondletter = " ";
+		word = "";
+		// prend une carte au hasard
+		int i;
+		i = UnityEngine.Random.Range(0, GameController.numberMaxCartesPerLevel);
+		// vérifie si la carte n'est pas null
+		if(cardsInDeck[i].Name!=null){
+			wordToGuess = cardsInDeck [i].Name;
+			currentTail = cardsInDeck [i].Tail;
+			Display3.display.DisplayClue (cardsInDeck[i]);
+			}
 	}
 
 	void HandleOnEndDrag (int numberOfStepsDone, string name, int dialName){
@@ -85,8 +110,23 @@ public class LevelController3:MonoBehaviour {
 		// vérifie si gagné et si oui envoie un event
 		if (word.ToUpper() == wordToGuess.ToUpper()) {
 			Debug.Log ("gagné ");
+			flag=true;
+			OnWordGuessed();
 		}
 	}
+
+	// listener de l'event OnWordGuessed
+	void HandleOnWordGuessed(){
+		//update the player data
+		Debug.Log ("OnWordGuessed2");
+
+	}
+
+	//nomenclature des listeners avec plusieurs paramètres
+	public delegate void WordGuessed();
+	//static donc peut être adressé par tout le monde
+	public static event WordGuessed OnWordGuessed;
+
 
 	// XML parsing to populate cardsInDeck
 	private void LoadConfigFile(){
