@@ -2,12 +2,12 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Display3.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameControllers/LevelController3.cs" Line="62" Column="40" />
-      <File FileName="Assets/Scripts/Display3.cs" Line="94" Column="18" />
-      <File FileName="Assets/Scripts/Dial.cs" Line="59" Column="38" />
-      <File FileName="Assets/Scripts/GameControllers/GameController.cs" Line="48" Column="18" />
+      <File FileName="Assets/Scripts/GameControllers/LevelController3.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Display3.cs" Line="82" Column="30" />
+      <File FileName="Assets/Scripts/Dial.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameControllers/GameController.cs" Line="1" Column="1" />
       <File FileName="Assets/XML/Cards3.xml" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameControllers/MainMenuController.cs" Line="21" Column="2" />
+      <File FileName="Assets/Scripts/GameControllers/MainMenuController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/GameControllers/MusicController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
@@ -18,6 +18,7 @@
               <Node name="GameControllers" expanded="True" />
               <Node name="Display3.cs" selected="True" />
             </Node>
+            <Node name="U3DXT" expanded="True" />
           </Node>
         </State>
       </Pad>

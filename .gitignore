@@ -14,15 +14,32 @@
     #
 
     # OS X only (not needed on other platforms)
-    .DS_Store
+    .DS_Store*
     *.swp
     *.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+.Spotlight-V100
+._*
+
+# Build
+iosBuild/
+AndroidBuild/
 
     # All platforms
-    Library
-    Temp
+Library/*
+    [Tt]emp/
+    [Bb]uild
+    [Oo]bj/
+    sysinfo.txt
+    [Ee]xported[Oo]bj/
     *.csproj
     *.pidb
     *.unityproj
-    *.sln
+    /*.suo
+    *.son
     *.userprefs 
+    /*.user
+    /*.unityproj
+    /*.booproj

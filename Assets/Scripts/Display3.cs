@@ -61,8 +61,22 @@ public class Display3 : MonoBehaviour {
 			item.SetActive(false);
 		}
 		// animation pour faire jolie
+		feuArtifice.transform.position = Vector3.zero;
 		feuArtifice.SetActive (true);
+	}
+
+	public void HandleOnFireworkDrag(){
+		Debug.Log ("HandleOnFireworkDrag");
+		#if UNITY_IPHONE || UNITY_ANDROID
 		feuArtifice.transform.position= Input.GetTouch (0).position;
+		#else	
+			Vector3 vector = Input.mousePosition;
+			feuArtifice.transform.position=new Vector2(vector.x, vector.y);
+		#endif
+	}
+
+	public void HandleOnClickMenu(string menuName){
+		Application.LoadLevel (menuName);
 	}
 
 	public void HandleOnClickReload(){
